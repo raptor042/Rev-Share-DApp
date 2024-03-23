@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import logo from "../../public/hamster.png";
 import chart from "../../public/chart.svg";
 import user from "../../public/user.svg";
-import cart from "../../public/cart.svg";
+import cart from "../../public/shopcart.svg";
 import hashtag from "../../public/hashtag.svg";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
