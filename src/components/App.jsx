@@ -128,16 +128,16 @@ const App = () => {
           try {
             setCanClaim(false)
             setLoading(true)
-
+      
             await rev.claim()
 
-            rev.on("User_Created", (user, e) => {
-              console.log(user)
-              setSuccessMsg(`Congratulations, your $HAMS revenue account has been created.`)
-              setTimeout(() => {
-                setSuccessMsg(null)
-              }, 3000)
-            })
+            // rev.on("User_Created", (user, e) => {
+            //   console.log(user)
+            //   setSuccessMsg(`Congratulations, your $HAMS revenue account has been created.`)
+            //   setTimeout(() => {
+            //     setSuccessMsg(null)
+            //   }, 3000)
+            // })
       
             rev.on("Claimed", (user, amount, e) => {
               console.log(user, amount)
