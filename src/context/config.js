@@ -1,6 +1,6 @@
-export const REV_SHARE_CA = "0xDC38F3Fb353195C35b169EC2f4CB3a14130BBcC3"
+export const REV_SHARE_CA = "0xD5A4fe56bd9D182c76D28d0822Baa66E556A5223"
 
-export const HAMS_CA = "0xF47B8bc1CBcdf611ca25Ac8a3c7c23c7F8fd7B2E"
+export const HAMS_CA = "0xC11dBFcc38b3F3e1b0896DD907B4460508141E07"
 
 export const REV_SHARE_ABI = [
   {
@@ -201,6 +201,13 @@ export const REV_SHARE_ABI = [
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdraw",
+    "outputs": [],
+    "stateMutability": "payable",
     "type": "function"
   }
 ]
