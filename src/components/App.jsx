@@ -106,7 +106,7 @@ const App = () => {
       setNextClaimTime(nextClaimTime)
     }
 
-    if(Number(ethers.formatEther(hamsBalance)) >= Number(ethers.formatEther(minBalance))) {
+    if(Number(ethers.formatEther(hamsBalance)) >= Number(ethers.formatEther(minBalance)) && Number(ethers.formatEther(pool)) > 0) {
       setCanClaim(true)
     }
   }
