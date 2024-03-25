@@ -88,7 +88,7 @@ const App = () => {
     console.log(user)
 
     const ratio = Number(ethers.formatEther(hamsBalance)) / Number(ethers.formatEther(supply))
-    const nextShareTotal = Number(ratio * Number(ethers.formatEther(pool))).toFixed(4)
+    const nextShareTotal = Number(ratio * Number(ethers.formatEther(pool))).toFixed(3)
     console.log(ratio, nextShareTotal)
 
     const nextClaimTime = Number(user[2]) + 86400
