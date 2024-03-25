@@ -150,6 +150,8 @@ const App = () => {
             })
           } catch (error) {
             console.log(error)
+            setCanClaim(true)
+            setLoading(false)
             setErrorMsg("An error occured while processing this request.")
             setTimeout(() => {
               setErrorMsg(null)
