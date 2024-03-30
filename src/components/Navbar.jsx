@@ -20,7 +20,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if(isConnected) {
+    if (isConnected) {
       const _address = truncate(address)
 
       setAccount(_address)
@@ -56,25 +56,24 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`media-links text-sm flex flex-col md:block border md:border-none border-solid border-slate-900 my-3 md:my-0 rounded-lg py-3 md:py-0  ${
-              isOpen ? "" : "hidden"
-            }`}
+            className={`media-links text-sm flex flex-col md:block border md:border-none border-solid border-slate-900 my-3 md:my-0 rounded-lg py-3 md:py-0  ${isOpen ? "" : "hidden"
+              }`}
           >
             {/* <Link
               href="/init"
-              className="mx-4 text-lg uppercase hover:text-blue-600 py-2"
+              className="mx-4 text-lg uppercase hover:text-[#DE8508] py-2"
             >
               Init
             </Link> */}
-            <a href="" className="mx-4 hover:text-blue-600 py-2">
+            <a href="" className="mx-4 hover:text-[#DE8508] py-2">
               <Image src={chart} alt="chart" className="inline mr-1" width={30} />
               Chart
             </a>
-            <a href="https://t.me/racinghamstersbot" className="mx-4 hover:text-blue-600 py-2">
+            <a href="https://t.me/racinghamstersbot" className="mx-4 hover:text-[#DE8508] py-2">
               <Image src={user} alt="Tg Bot" className="inline mr-1" width={30} />
               Telegram
             </a>
-            <a href="https://x.com/racinghamsters" className="mx-4 hover:text-blue-600 py-2">
+            <a href="https://x.com/racinghamsters" className="mx-4 hover:text-[#DE8508] py-2">
               <Image
                 src={hashtag}
                 alt="Twitter"
@@ -83,18 +82,18 @@ const Navbar = () => {
               />
               Twitter
             </a>
-            <a href="" className="mx-4 hover:text-blue-600 py-2">
+            <a href="" className="mx-4 hover:text-[#DE8508] py-2">
               <Image src={cart} alt="chart" className="inline mr-1" width={30} />
               Buy $HAMS
             </a>
           </div>
 
           <button
-            className="bg-blue-600 text-slate-100 rounded-xl px-4 py-3 hover:bg-blue-800"
+            className="bg-[#DE8508] text-slate-100 rounded-xl px-4 py-3 hover:bg-orange-400 animate-pulse"
             onClick={() => open()}
           >
-            { isConnected ?
-                account : "Connect Wallet"
+            {isConnected ?
+              account : "Connect Wallet"
             }
           </button>
         </div>
