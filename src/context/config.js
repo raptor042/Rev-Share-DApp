@@ -1,4 +1,4 @@
-export const REV_SHARE_CA = "0x0C55c6e0f8EDeffa853A3d17bf58B0D228FF9641"
+export const REV_SHARE_CA = "0x761059c3f480A33B9BDf15DF047BA81c425F297b"
 
 export const HAMS_CA = "0xC11dBFcc38b3F3e1b0896DD907B4460508141E07"
 
@@ -60,6 +60,32 @@ export const REV_SHARE_ABI = [
     "type": "event"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "min_balance",
+        "type": "uint256"
+      }
+    ],
+    "name": "changeMinBalance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "min_deposit",
+        "type": "uint256"
+      }
+    ],
+    "name": "changeMinDeposit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "claim",
     "outputs": [],
@@ -74,10 +100,42 @@ export const REV_SHARE_ABI = [
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "eligible",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "fundPool",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "hodler",
+        "type": "address"
+      }
+    ],
+    "name": "make_eligible",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {

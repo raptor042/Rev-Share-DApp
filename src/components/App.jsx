@@ -22,6 +22,7 @@ const App = () => {
   const [ethBalance, setETHBalance] = useState(0)
 
   const [canClaim, setCanClaim] = useState(false)
+  const [eligible, setEligible] = useState(false)
 
   const [loading, setLoading] = useState(false)
 
@@ -65,6 +66,10 @@ const App = () => {
       HAMS_ABI.abi,
       signer
     )
+
+    const eligible = await rev.eligible(address)
+    console.log(eligible)
+    setEligible(eligible)
 
     const minBalance = await rev.minBalance()
     console.log(ethers.formatEther(minBalance))
@@ -238,6 +243,7 @@ const App = () => {
           disabled={
             !isConnected ||
             !canClaim ||
+            !eligible ||
             (nextClaimTime != 0 && nextClaimTime * 1000 >= Date.now())
           }
           onClick={onClaim}
